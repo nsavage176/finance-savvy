@@ -1,3 +1,4 @@
+// backend/models/Transaction.js
 const mongoose = require('mongoose');
 
 const TransactionSchema = new mongoose.Schema({
@@ -7,6 +8,4 @@ const TransactionSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now },
 });
 
-const Transaction = mongoose.model('Transaction', TransactionSchema);
-
-module.exports = Transaction;
+module.exports = mongoose.model('Transaction', TransactionSchema);
