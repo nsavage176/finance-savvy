@@ -13,6 +13,6 @@ API.interceptors.request.use((config) => {
 });
 
 export const registerUser = (email, password) => API.post('/auth/register', { email, password });
-export const loginUser = (email, password) => API.post('/auth/login', { email, password });
+export const loginUser = (password) => API.post('/auth/login', { email, password });
 export const getTransactions = () => API.get('/transactions');
 export const addTransaction = (amount, description) => API.post('/transactions', { amount, description });
